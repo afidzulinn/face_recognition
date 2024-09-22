@@ -1,0 +1,63 @@
+Untuk tugas deteksi wajah dan pencocokan yang Anda kerjakan, Anda memerlukan dua jenis dataset:
+
+1. Dataset untuk melatih model deteksi wajah YOLO (jika Anda ingin melatih model sendiri)
+2. Dataset untuk pengujian sistem Anda (video dan foto referensi)
+
+Berikut beberapa sumber yang dapat Anda gunakan untuk mencari dataset:
+
+1. Dataset untuk melatih model deteksi wajah YOLO:
+
+   a) WIDER FACE: Dataset besar dengan lebih dari 32.000 gambar dan 393.703 wajah dengan berbagai variasi ukuran, pose, dan oklusi.
+      Link: http://shuoyang1213.me/WIDERFACE/
+
+   b) FDDB (Face Detection Data Set and Benchmark): Berisi anotasi untuk 5171 wajah dalam sekumpulan 2845 gambar.
+      Link: http://vis-www.cs.umass.edu/fddb/
+
+   c) MAFA (MAsked FAces): Dataset dengan fokus pada wajah yang tertutupi sebagian, seperti yang menggunakan masker.
+      Link: http://www.escience.cn/people/geshiming/mafa.html
+
+2. Dataset untuk pengujian sistem (video dan foto referensi):
+
+   a) YouTube Faces Database: Berisi 3,425 video dari 1,595 orang berbeda yang diambil dari YouTube.
+      Link: https://www.cs.tau.ac.il/~wolf/ytfaces/
+
+   b) VGGFace2: Dataset skala besar dengan lebih dari 3 juta gambar wajah dari lebih dari 9000 identitas berbeda.
+      Link: http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/
+
+   c) LFW (Labeled Faces in the Wild): Dataset yang umum digunakan untuk pengujian pengenalan wajah, berisi lebih dari 13.000 gambar wajah.
+      Link: http://vis-www.cs.umass.edu/lfw/
+
+   d) IJB-C (IARPA Janus Benchmark - C): Dataset yang lebih menantang dengan variasi pose, pencahayaan, dan resolusi yang besar.
+      Link: https://www.nist.gov/programs-projects/face-challenges
+
+Untuk tugas Anda, Anda mungkin perlu:
+1. Sebuah video rekaman CCTV atau video serupa (bisa dari YouTube Faces Database atau sumber lain)
+2. Beberapa foto referensi wajah (bisa dari LFW atau VGGFace2)
+
+Penting untuk diingat:
+- Pastikan Anda memiliki izin untuk menggunakan dataset yang Anda pilih.
+- Beberapa dataset mungkin memerlukan pendaftaran atau persetujuan sebelum diunduh.
+- Jika dataset asli terlalu besar, Anda bisa menggunakan subset yang lebih kecil untuk tugas Anda.
+
+
+# Dalam controller.py
+from app.models.model import FaceDetectionModel
+from app.views.view import FaceDetectionView
+
+# Dalam main.py
+from app.controllers.controller import FaceDetectionController
+
+
+Untuk video rekaman DVR:
+a) VIRAT Video Dataset: Berisi rekaman video pengawasan dari berbagai skenario.
+Link: https://viratdata.org/
+b) UMN DVR Dataset: Dataset yang berisi rekaman video DVR dari berbagai lokasi.
+Link: https://www.umn.edu/~dcmoyer/research_umn.html
+c) YouTube: Anda dapat mencari dan mengunduh video CCTV atau pengawasan yang tersedia untuk umum.
+Untuk foto referensi wajah:
+a) Labeled Faces in the Wild (LFW): Dataset yang umum digunakan untuk pengenalan wajah.
+Link: http://vis-www.cs.umass.edu/lfw/
+b) VGGFace2: Dataset skala besar dengan lebih dari 3 juta gambar wajah.
+Link: http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/
+c) CelebA: Dataset dengan lebih dari 200.000 gambar wajah selebriti.
+Link: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
